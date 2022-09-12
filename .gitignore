@@ -17,6 +17,10 @@ yarn-error.log*
 firebase-debug.log*
 firebase-error.log*
 
+# Firebase
+.firebaserc
+firebase.json
+
 # VS Code
 .vscode/*
 !.vscode/snippets

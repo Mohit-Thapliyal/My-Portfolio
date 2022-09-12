@@ -14,8 +14,8 @@ const projects = [
     title: "Portfolio",
     description:
       "My personal website showcases my web designing and web development skills. Beautifully designed with react and tailwind.",
-    link: "",
-    github: "",
+    link: "https://mohitthapliyal.in",
+    github: "https://github.com/Mohit-Thapliyal/my-portfolio",
   },
   {
     id: "pj2",
