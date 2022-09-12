@@ -5,12 +5,12 @@ const workDetails = [
   {
     id: "w1",
     jobRole: "JavaScript Developer",
-    company: "Eupheus Learing ∙ Intenship",
+    company: "Eupheus Learning ∙ Internship",
     location: "Delhi, India",
     responsibilities: [
-      "Design and build interactive online books",
-      "Apply logic for various interactive activities for students",
-      "Manage already written code base",
+      "Designed and built interactive online books",
+      "Applied logic for various interactive activities for students",
+      "Managed already written code base",
     ],
     skills: ["CSS", "HTML", "JavaScript", "jQuery"],
     duration: "Jul 2022 - Aug 2022 · 1 mo",
@@ -18,12 +18,12 @@ const workDetails = [
   {
     id: "w2",
     jobRole: "Web Developer",
-    company: "Dignifyd Digital Solutions · Intenship",
+    company: "Dignifyd Digital Solutions · Internship",
     location: "Delhi, India",
     responsibilities: [
-      "Work on real-world projects",
-      "Handle clients and design websites according to requirements",
-      "Use custom code and templating",
+      "Worked on real-world projects",
+      "Handled clients and designed websites according to requirements",
+      "Used custom code and templating",
     ],
     skills: ["CSS", "HTML", "JavaScript", "Bootstrap"],
     duration: "Sep 2021 - Nov 2021 · 3 mos",
@@ -33,7 +33,7 @@ const workDetails = [
     jobRole: "Web Developer",
     company: "Failure to Success ∙ Intenship",
     location: "Delhi, India",
-    responsibilities: ["Work as a part of a team", "Build responsive web apps"],
+    responsibilities: ["Worked as a part of a team", "Built responsive web apps"],
     skills: [
       "Flask",
       "CSS",

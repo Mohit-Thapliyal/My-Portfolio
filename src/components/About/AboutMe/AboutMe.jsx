@@ -18,7 +18,7 @@ const AboutMe = () => {
             My name is <span className="font-semibold">Mohit Thapliyal</span>{" "}
             and I'm 21 years old. Currently pursuing a{" "}
             <span className="font-semibold">
-              Bachelor of Technology in Computer Science
+              Bachelors of Technology in Computer Science
             </span>{" "}
             from <span className="font-semibold">TIIPS</span>.
           </div>
