@@ -40,12 +40,11 @@ const Contact = () => {
         (error) => {
           console.log(error.text);
           setMessageType(false);
-          // console.log('guguyg')
         }
       );
-    // form.current.user_name.value = "";
-    // form.current.user_email.value = "";
-    // form.current.message.value = "";
+    form.current.user_name.value = "";
+    form.current.user_email.value = "";
+    form.current.message.value = "";
 
     setMessageSent(true);
     setTimeout(() => {

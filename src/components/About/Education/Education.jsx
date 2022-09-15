@@ -4,8 +4,8 @@ import EducationItem from "./EducationItem";
 const educationDetails = [
   {
     id: "edu1",
-    uniName: "Trinity Institute of Innovation in Professional Studies (GGSIPU)",
-    location: "Greater Noida, Uttar Pradesh, India",
+    uniName: "Guru Gobind Singh Indraprastha University",
+    location: "Delhi, India",
     courseName: "B.Tech · Computer Science Engineering",
     marks: "9.1 CGPA",
     duration: "2019 - Present",
