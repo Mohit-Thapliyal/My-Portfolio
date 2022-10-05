@@ -4,7 +4,7 @@ import { HiDownload } from "react-icons/hi";
 
 import profilePic from "../../images/profile/mohit1.png";
 import background from '../../images/background/background2.jpg'
-import resume from "../../resume/resume.pdf";
+import resume from "../../resume/Mohit_Resume.pdf";
 
 const Main = () => {
   return (
