@@ -4,7 +4,6 @@ import { HiDownload } from "react-icons/hi";
 
 import profilePic from "../../images/profile/mohit1.png";
 import background from '../../images/background/background2.jpg'
-import resume from "../../resume/Mohit_Resume.pdf";
 
 const Main = () => {
   return (
@@ -50,7 +49,7 @@ const Main = () => {
               Hire me
             </Link>
             <a
-              href={resume}
+              href={"https://drive.google.com/file/d/1qb19b9Z4yZ6iWWdH5XPlIWn1L8jgI8S6/view?usp=sharing"}
               target="blank"
               className="flex bg-transparent hover:bg-rose-600 text-rose-600 font-semibold hover:text-white py-2 px-3 md:px-5 border border-rose-500 hover:border-transparent rounded ml-3"
             >
