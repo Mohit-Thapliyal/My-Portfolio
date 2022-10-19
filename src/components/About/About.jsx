@@ -1,12 +1,14 @@
 import React, { useState } from "react";
 import { FaUserGraduate, FaPalette, FaHistory } from "react-icons/fa";
 import {BsFillFileEarmarkPersonFill} from 'react-icons/bs'
+import {AiFillSafetyCertificate} from "react-icons/ai"
 
 import Education from "./Education/Education";
 import Hobby from "./Hobby/Hobby";
 import Work from "./Work/Work";
 import Modal from "../UI/Modal";
 import AboutMe from "./AboutMe/AboutMe";
+import Certification from "./Certification/Certification";
 
 const aboutList = [
   {
@@ -28,6 +30,11 @@ const aboutList = [
     id: "l4",
     title: "Interest",
     number: 4,
+  },
+  {
+    id: "l5",
+    title: "Certificate",
+    number: 5,
   },
 ];
 
@@ -99,6 +106,14 @@ const About = () => {
             >
               <FaPalette />
             </li>
+            <li
+              onClick={() => {
+                setSectionNumber(5);
+              }}
+              className="cursor-pointer text-white text-sm md:text-lg lg:text-xl font-bold pt-3 -ml-6 lg:-ml-7"
+            >
+              <AiFillSafetyCertificate />
+            </li>
           </ul>
           <ul className="flex justify-evenly flex-col w-full select-none">
             {aboutList.map((element) => (
@@ -124,6 +139,7 @@ const About = () => {
           {sectionNumber === 2 && <Education />}
           {sectionNumber === 3 && <Work />}
           {sectionNumber === 4 && <Hobby onShowModal={showModalHandler} />}
+          {sectionNumber === 5 && <Certification />}
         </div>
       </div>
     </>
