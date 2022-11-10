@@ -113,7 +113,7 @@ const Skills = () => {
   return (
     <div
       id="skills"
-      className="bg-slate-100 w-screen h-fit md:h-fit flex flex-col justify-center items-center py-[7vh]  md:py-[5vh] lg:py-[17vh] xl:py-[17vh]"
+      className="bg-slate-100 min-h-screen w-screen h-fit md:h-fit flex flex-col justify-center items-center py-[7vh]  md:py-[5vh] lg:py-[17vh] xl:py-[17vh]"
     >
       <div className="grid grid-cols-3 grid-rows-5 md:grid-cols-5 md:grid-rows-3 gap-x-10 md:gap-x-12 lg:gap-x-14 xl:gap-x-20 gap-y-8 md:gap-y-10 lg:gap-y-14 xl:gap-y-20">
         {skillIcons.map((skillIcon) => (

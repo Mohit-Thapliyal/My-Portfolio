@@ -1,10 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import Slider from "react-slick";
 import bg1 from "../../images/project/project1.jpg";
 import bg2 from "../../images/project/project2.jpg";
 import bg3 from "../../images/project/project3.jpg";
 import bg4 from "../../images/project/project4.jpg";
 import bg5 from "../../images/project/project5.jpg";
+import bg6 from "../../images/project/project6.jpg";
+import Modal from "../UI/Modal";
 import Project from "./Project";
 
 const projects = [
@@ -53,9 +55,31 @@ const projects = [
     link: "https://car-price-predictor-mt.herokuapp.com/",
     github: "https://github.com/Mohit-Thapliyal/Car-Price-Predictor",
   },
+  {
+    id: "pj5",
+    image: bg6,
+    title: "Shareme",
+    description:
+      "A platform where you can add images as well as see the images posted by other, uses google authentication, sanit, react and tailwind.",
+    link: "https://sharememohit.netlify.app/search",
+    github: "",
+  },
 ];
 
 const Portfolio = () => {
+  const [selectedPainting, setSelectedPainting] = useState(null);
+  const [showModal, setShowModal] = useState(false);
+  const [selectedOrientation, setSelectedOrientation] = useState(1);
+
+  const hideModalHandler = () => {
+    setShowModal(false);
+  };
+  const showModalHandler = (orientation, painting) => {
+    setSelectedPainting(painting);
+    setSelectedOrientation(orientation);
+    setShowModal(true);
+  };
+
   const settings = {
     centerMode: true,
     dots: true,
@@ -91,25 +115,35 @@ const Portfolio = () => {
     ],
   };
   return (
-    <div
-      id="portfolio"
-      className="bg-slate-900 w-screen md:px-[2.5rem] xl:px-[5rem] h-[95vh] md:h-fit md:py-[10vh] lg:py-[19vh] xl:py-[24vh] flex flex-col justify-center"
-    >
-      <div>
-        <Slider {...settings}>
-          {projects.map((project) => (
-            <Project
-              key={project.id}
-              image={project.image}
-              title={project.title}
-              description={project.description}
-              link={project.link}
-              github={project.github}
-            />
-          ))}
-        </Slider>
+    <>
+      {showModal && (
+        <Modal
+          painting={selectedPainting}
+          onClose={hideModalHandler}
+          orientation={selectedOrientation}
+        />
+      )}
+      <div
+        id="portfolio"
+        className="bg-slate-900 w-screen md:px-[2.5rem] xl:px-[5rem] h-[95vh] md:h-fit md:py-[10vh] lg:py-[19vh] xl:py-[24vh] flex flex-col justify-center"
+      >
+        <div>
+          <Slider {...settings}>
+            {projects.map((project) => (
+              <Project
+                key={project.id}
+                image={project.image}
+                title={project.title}
+                description={project.description}
+                link={project.link}
+                github={project.github}
+                onShowModal={showModalHandler}
+              />
+            ))}
+          </Slider>
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 

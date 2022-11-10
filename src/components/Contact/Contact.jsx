@@ -12,6 +12,7 @@ import { SiBuymeacoffee } from "react-icons/si";
 
 import background from "../../images/background/background1.jpg";
 import Notification from "../UI/Notification";
+import Footer from "../Footer/Footer";
 
 const Contact = () => {
   const form = useRef();
@@ -54,6 +55,7 @@ const Contact = () => {
   };
 
   return (
+    <>
     <div
       id="contact"
       style={{
@@ -63,8 +65,8 @@ const Contact = () => {
       className="flex justify-center items-center bg-gray-100 w-full lg:min-h-screen"
     >
       {messageSent && <Notification messageClass={messageType} onCloseMessage={closeMessageHandler} />}
-      <div className="flex flex-col md:flex-row space-y-8 md:space-x-6 md:space-y-0 bg-cyan-50 w-full lg:max-w-4xl xl:max-w-5xl p-8 sm:p-12 lg:rounded-xl shadow-lg text-sky-900 bg-opacity-90 backdrop-blur-lg">
-        <div className="flex flex-col space-y-8 justify-between">
+      <div className="flex flex-col md:flex-row space-y-8 md:space-x-6 md:space-y-0 bg-cyan-50 w-full lg:max-w-4xl xl:max-w-5xl p-8 sm:p-6 lg:rounded-xl xl:p-10 xl:py-14 shadow-lg text-sky-900 bg-opacity-90 backdrop-blur-lg">
+        <div className="flex flex-col space-y-4 sm:space-y-0 justify-between">
           <div>
             <h1 className="font-bold text-4xl tracking-wide">Contact Me</h1>
             <p className="pt-2 text-cyan-800 text-sm">
@@ -76,13 +78,13 @@ const Contact = () => {
             <a
               href="https://www.buymeacoffee.com/mohitthapliyal"
               target="buymeacoffee"
-              className="inline-flex items-center space-x-2 bg-teal-300 mt-2 px-2 py-1 rounded-md"
+              className="inline-flex items-center space-x-2 bg-teal-300 mt-2 px-2 py-1 rounded-md xl:mt-4 sm:hover:scale-105 duration-300"
             >
               <SiBuymeacoffee className="text-2xl" />
               <span className="font-edusa font-semibold">Buy me a coffee</span>
             </a>
           </div>
-          <div className="flex flex-col space-y-6">
+          <div className="flex flex-col space-y-1 sm:space-y-6">
             <div>
               <a
                 href="tel:+917011681275"
@@ -135,7 +137,7 @@ const Contact = () => {
           </div>
         </div>
         <div>
-          <div className="bg-sky-900 rounded-xl shadow-lg p-8 text-gray-100 md:w-96">
+          <div className="bg-sky-900 rounded-xl shadow-lg p-8 py-5 xl:py-9 text-gray-100 md:w-96">
             <form
               ref={form}
               onSubmit={sendEmail}
@@ -192,6 +194,8 @@ const Contact = () => {
         </div>
       </div>
     </div>
+    <Footer/>
+    </>
   );
 };
 

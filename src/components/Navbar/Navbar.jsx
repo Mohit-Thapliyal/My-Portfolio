@@ -14,7 +14,7 @@ const Navitems = [
     id: "ni1",
     icon: <BiHome className="text-xl font-thin" />,
     text: "Home",
-    to: "home",
+    to: "/",
   },
   {
     id: "ni2",

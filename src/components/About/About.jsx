@@ -55,7 +55,7 @@ const About = () => {
   };
 
   const aboutNavClass =
-    " font-quicksand w-2/5 lg:w-full cursor-pointer text-white text-sm md:text-md lg:text-lg font-extrabold rounded-r-full p-1 -ml-1 lg:ml-0 pl-4";
+    " font-quicksand w-2/5 lg:w-full py-0 cursor-pointer text-white text-sm md:text-md lg:text-lg font-extrabold rounded-r-full sm:p-1 -ml-1 lg:ml-0 pl-4 sm:pl-4";
   const aboutNavActiveClass =
     "font-quicksand w-2/5 lg:w-full cursor-pointer text-sm text-white bg-cyan-600 md:text-md lg:text-lg font-bold rounded-r-full p-1 -ml-1 lg:ml-0 pl-4 lg:text-left ";
 

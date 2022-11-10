@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-scroll";
+import { Link } from "react-router-dom";
 import { HiDownload } from "react-icons/hi";
 
 import profilePic from "../../images/profile/mohit1.png";
@@ -10,9 +10,9 @@ const Main = () => {
     <main
       id="home"
       style={{background: `url(${background}) no-repeat center`, backgroundSize: "cover"}}
-      className="font-nunito flex flex-col justify-start md:justify-center  h-full w-screen "
+      className="relative font-nunito flex flex-col justify-center md:justify-center min-h-screen w-screen "
     >
-      <div className=" lg:hidden bg-rose-500 flex justify-between p-3">
+      <div className="fixed top-0 w-full lg:hidden bg-rose-500 flex justify-between p-3 z-20">
         <span className=" text-lg font-extrabold text-rose-100 tracking-wider font-comfortaa">
           Portfolio
         </span>
