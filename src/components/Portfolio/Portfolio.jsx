@@ -61,7 +61,7 @@ const projects = [
     title: "Shareme",
     description:
       "A platform where you can add images as well as see the images posted by other, uses google authentication, sanit, react and tailwind.",
-    link: "https://sharememohit.netlify.app/search",
+    link: "https://shareme.mohitthapliyal.in",
     github: "",
   },
 ];

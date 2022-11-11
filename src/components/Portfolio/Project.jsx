@@ -5,13 +5,12 @@ import {BiLink} from "react-icons/bi"
 const Project = (props) => {
   return (
     <div>
-      <div className="flex flex-col justify-center items-center"
-      onClick={() => {
-        props.onShowModal(1, props.image);
-      }}>
+      <div className="flex flex-col justify-center items-center">
         <div className="bg-white w-11/12 rounded-2xl overflow-hidden">
           <div className="h-40 md:h-40 lg:h-40 xl:h-52">
-            <img className="w-full h-full rounded-lg border-b cursor-pointer" src={props.image} alt="" />
+            <img className="w-full h-full rounded-lg border-b cursor-pointer" src={props.image} alt="project-img" onClick={() => {
+        props.onShowModal(1, props.image);
+      }} />
           </div>
           <div className="p-5">
             <h2 className="text-sky-700 font-quicksand font-bold text-xl">
