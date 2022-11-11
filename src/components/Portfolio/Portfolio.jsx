@@ -62,7 +62,7 @@ const projects = [
     description:
       "A platform where you can add images as well as see the images posted by other, uses google authentication, sanit, react and tailwind.",
     link: "https://shareme.mohitthapliyal.in",
-    github: "",
+    github: "https://github.com/Mohit-Thapliyal/shareme",
   },
 ];
 
