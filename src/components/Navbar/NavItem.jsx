@@ -9,8 +9,6 @@ const NavItem = (props) => {
   return (
     <NavLink
       to={props.to}
-      spy
-      smooth
       className={({isActive})=>isActive?activeNavClassName:navClassName}
     >
       {props.icon}

@@ -9,6 +9,7 @@ import Work from "./Work/Work";
 import Modal from "../UI/Modal";
 import AboutMe from "./AboutMe/AboutMe";
 import Certification from "./Certification/Certification";
+import AnimatedPage from "../UI/AnimatedPage";
 
 const aboutList = [
   {
@@ -60,7 +61,7 @@ const About = () => {
     "font-quicksand w-2/5 lg:w-full cursor-pointer text-sm text-white bg-cyan-600 md:text-md lg:text-lg font-bold rounded-r-full p-1 -ml-1 lg:ml-0 pl-4 lg:text-left ";
 
   return (
-    <>
+    <AnimatedPage>
       {showModal && (
         <Modal
           painting={selectedPainting}
@@ -70,9 +71,9 @@ const About = () => {
       )}
       <div
         id="about"
-        className="flex pt-0 md:py-16 flex-col lg:flex-row  justify-center items-center bg-slate-900 w-screen h-[95vh] md:h-fit lg:h-[101vh] gap-7 lg:gap-4"
+        className="flex pt-0 md:py-16 flex-col lg:flex-row justify-center items-center bg-slate-900 w-screen h-[95vh] md:h-screen lg:h-[101vh] gap-2 lg:gap-4"
       >
-        <div className=" flex w-11/12 h-[20vh] md:h-1/6 lg:w-1/6 lg:h-5/6 text-left border-cyan-600 border-l-[1.8rem] lg:border-l-[2.2rem] font-nunito">
+        <div className="hidden lg:flex w-11/12 h-[20vh] md:h-[20vh] lg:w-1/6 lg:h-5/6 text-left border-cyan-600 border-l-[1.8rem] lg:border-l-[2.2rem] font-nunito">
           <ul className="flex justify-evenly flex-col select-none">
             <li
               onClick={() => {
@@ -133,8 +134,21 @@ const About = () => {
             ))}
           </ul>
         </div>
+       
+        <ul className="grid grid-rows-3 grid-cols-2 lg:hidden h-fit w-11/12 gap-x-3 md:gap-x-8 gap-y-2 md:gap-y-3">
+          {aboutList.map((element)=>(
+            <li key={element.id}
+            onClick={()=>{setSectionNumber(element.number)}}
+            className={
+              sectionNumber === element.number
+                ? "font-quicksand cursor-pointer shadow-xl md:text-xl text-white rounded-lg p-2 font-extrabold bg-cyan-600 flex justify-center items-center"
+                : "font-quicksand cursor-pointer shadow-xl md:text-xl text-white rounded-lg p-2 font-semibold bg-slate-700 flex justify-center items-center"
+            }
+            >{element.title}</li>
+          ))}
+        </ul>
 
-        <div className=" w-11/12 h-4/6 md:h-[35vh] lg:w-4/6 lg:h-5/6 overflow-y-scroll shadow-lg bg-slate-200 rounded-sm">
+        <div className=" w-11/12 h-4/6 md:h-5/6 lg:w-4/6 lg:h-5/6 overflow-y-scroll shadow-lg bg-slate-200 rounded-sm">
           {sectionNumber === 1 && <AboutMe/>}
           {sectionNumber === 2 && <Education />}
           {sectionNumber === 3 && <Work />}
@@ -142,7 +156,7 @@ const About = () => {
           {sectionNumber === 5 && <Certification />}
         </div>
       </div>
-    </>
+    </AnimatedPage>
   );
 };
 

@@ -8,6 +8,7 @@ import bg5 from "../../images/project/project5.jpg";
 import bg6 from "../../images/project/project6.jpg";
 import Modal from "../UI/Modal";
 import Project from "./Project";
+import AnimatedPage from '../UI/AnimatedPage'
 
 const projects = [
   {
@@ -115,7 +116,7 @@ const Portfolio = () => {
     ],
   };
   return (
-    <>
+    <AnimatedPage>
       {showModal && (
         <Modal
           painting={selectedPainting}
@@ -125,7 +126,7 @@ const Portfolio = () => {
       )}
       <div
         id="portfolio"
-        className="bg-slate-900 w-screen md:px-[2.5rem] xl:px-[5rem] h-[95vh] md:h-fit md:py-[10vh] lg:py-[19vh] xl:py-[24vh] flex flex-col justify-center"
+        className="bg-slate-900 w-screen md:px-[2.5rem] xl:px-[5rem] h-[95vh] md:h-screen md:py-[10vh] lg:py-[19vh] xl:py-[24vh] flex flex-col justify-center"
       >
         <div>
           <Slider {...settings}>
@@ -143,7 +144,7 @@ const Portfolio = () => {
           </Slider>
         </div>
       </div>
-    </>
+    </AnimatedPage>
   );
 };
 

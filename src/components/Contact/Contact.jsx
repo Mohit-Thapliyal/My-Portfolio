@@ -13,6 +13,7 @@ import { SiBuymeacoffee } from "react-icons/si";
 import background from "../../images/background/background1.jpg";
 import Notification from "../UI/Notification";
 import Footer from "../Footer/Footer";
+import AnimatedPage from "../UI/AnimatedPage";
 
 const Contact = () => {
   const form = useRef();
@@ -55,7 +56,7 @@ const Contact = () => {
   };
 
   return (
-    <>
+    <AnimatedPage>
     <div
       id="contact"
       style={{
@@ -65,7 +66,7 @@ const Contact = () => {
       className="flex justify-center items-center bg-gray-100 w-full lg:min-h-screen"
     >
       {messageSent && <Notification messageClass={messageType} onCloseMessage={closeMessageHandler} />}
-      <div className="flex flex-col md:flex-row space-y-8 md:space-x-6 md:space-y-0 bg-cyan-50 w-full lg:max-w-4xl xl:max-w-5xl p-8 sm:p-6 lg:rounded-xl xl:p-10 xl:py-14 shadow-lg text-sky-900 bg-opacity-90 backdrop-blur-lg">
+      <div className="flex flex-col lg:flex-row space-y-8 lg:space-x-6 lg:space-y-0 bg-cyan-50 w-full md:p-32 lg:py-6 lg:max-w-4xl xl:max-w-5xl p-8 sm:p-6 lg:rounded-xl xl:p-10 xl:py-14 shadow-lg text-sky-900 bg-opacity-90 backdrop-blur-lg">
         <div className="flex flex-col space-y-4 sm:space-y-0 justify-between">
           <div>
             <h1 className="font-bold text-4xl tracking-wide">Contact Me</h1>
@@ -137,7 +138,7 @@ const Contact = () => {
           </div>
         </div>
         <div>
-          <div className="bg-sky-900 rounded-xl shadow-lg p-8 py-5 xl:py-9 text-gray-100 md:w-96">
+          <div className="bg-sky-900 rounded-xl shadow-lg p-8 py-5 xl:py-9 text-gray-100 lg:w-96">
             <form
               ref={form}
               onSubmit={sendEmail}
@@ -195,7 +196,7 @@ const Contact = () => {
       </div>
     </div>
     <Footer/>
-    </>
+    </AnimatedPage>
   );
 };
 

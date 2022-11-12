@@ -10,7 +10,7 @@ const AboutMe = () => {
       }}
       className="min-h-full md:h-full p-1 md:p-3 lg:p-5 xl:p-7 bg-sky-900 flex justify-between items-center"
     >
-      <div className="flex flex-col justify-center items-center px-2 py-3 xl:py-6 xl:px-5 bg-white backdrop-blur-md bg-opacity-80 h-full rounded-md drop-shadow-xl font-edusa font-medium lg:text-md xl:text-2xl text-cyan-800 text-center">
+      <div className="flex flex-col justify-center items-center px-2 py-3 xl:py-6 xl:px-5 bg-white backdrop-blur-md bg-opacity-80 h-full rounded-md drop-shadow-xl font-edusa font-medium md:text-lg lg:text-lg xl:text-2xl text-cyan-800 text-center">
         <h2 className="font-bold">Hello! Everyone, </h2>
         <p>Hope you all are doing well.</p>
         <div className="">

@@ -3,7 +3,19 @@ import WorkItem from "./WorkItem";
 
 const workDetails = [
   {
-    id: "w1",
+    jobRole: "Frontend/React Developer",
+    company: "Petmojo ∙ Internship",
+    location: "Delhi, India",
+    responsibilities: [
+      "Worte a completely new code base.",
+      "Working on Dashboard with Google map API.",
+      "Using React and Tailwind for designing the website.",
+      "Managing Authentication and Authorization"
+    ],
+    skills: ["React", "Tailwind", "JavaScript", "REST API", "JWT"],
+    duration: "Sep 2022 - Present · 2 mo",
+  },
+  {
     jobRole: "JavaScript Developer",
     company: "Eupheus Learning ∙ Internship",
     location: "Delhi, India",
@@ -16,7 +28,6 @@ const workDetails = [
     duration: "Jul 2022 - Aug 2022 · 1 mo",
   },
   {
-    id: "w2",
     jobRole: "Web Developer",
     company: "Dignifyd Digital Solutions · Internship",
     location: "Delhi, India",
@@ -29,7 +40,6 @@ const workDetails = [
     duration: "Sep 2021 - Nov 2021 · 3 mos",
   },
   {
-    id: "w3",
     jobRole: "Web Developer",
     company: "Failure to Success ∙ Intenship",
     location: "Delhi, India",
@@ -51,9 +61,9 @@ const workDetails = [
 const Work = () => {
   return (
     <ul className=" flex flex-col gap-10 px-3 lg:px-12 py-5 lg:py-10">
-      {workDetails.map((workDetail) => (
+      {workDetails.map((workDetail,i) => (
         <WorkItem
-          key={workDetail.id}
+          key={`w${i}`}
           jobRole={workDetail.jobRole}
           company={workDetail.company}
           location={workDetail.location}

@@ -9,7 +9,7 @@ import {
 const Footer = () => {
   const date = new Date();
   return (
-    <div className=" bg-slate-900 flex-col-reverse md:flex-row text-white w-screen gap-4 h-fit py-6 sm:p-10 pb-[8vh] md:pb-[8vh] lg:p-5 xl:p-8 flex justify-around items-center">
+    <div className=" bg-slate-900 flex-col-reverse lg:flex-row text-white w-screen gap-4 h-fit py-6 sm:p-10 pb-[8vh] md:pb-[8vh] lg:p-5 xl:p-8 flex justify-around items-center">
       <div className="text-sm sm:text-lg font-mono">
         <p>All rights reserved © {date.getFullYear()}</p>
       </div>
